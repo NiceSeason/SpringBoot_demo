@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ce692f94-6e23-471a-adc1-251c484d2218" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Works\Softwares\Module\maven\maven_repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../Module/maven/apache-maven-3.5.2" />
+        <option name="userSettingsFile" value="D:\Works\Softwares\Module\maven\apache-maven-3.5.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectId" id="1Z7Gk1HltdLborfwvxPN0nXFSMF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="cn.ustc.edu.springboot02config.domain" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpringBoot02ConfigApplication">
+    <configuration name="SpringBoot02ConfigApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-02-config" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.ustc.edu.springboot02config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.ustc.edu.springboot02config" />
+      <option name="MAIN_CLASS_NAME" value="cn.ustc.edu.springboot02config.SpringBoot02ConfigApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBoot02ConfigApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-02-config" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.ustc.edu.springboot02config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.ustc.edu.springboot02config" />
+      <option name="MAIN_CLASS_NAME" value="cn.ustc.edu.springboot02config.SpringBoot02ConfigApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBoot02ConfigApplicationTests.testService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-02-config" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.ustc.edu.springboot02config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.ustc.edu.springboot02config" />
+      <option name="MAIN_CLASS_NAME" value="cn.ustc.edu.springboot02config.SpringBoot02ConfigApplicationTests" />
+      <option name="METHOD_NAME" value="testService" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBoot02ConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-02-config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.ustc.edu.springboot02config.SpringBoot02ConfigApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.SpringBoot02ConfigApplicationTests" />
+      <item itemvalue="JUnit.SpringBoot02ConfigApplicationTests.contextLoads" />
+      <item itemvalue="JUnit.SpringBoot02ConfigApplicationTests.testService" />
+      <item itemvalue="Spring Boot.SpringBoot02ConfigApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SpringBoot02ConfigApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.SpringBoot02ConfigApplicationTests.testService" />
+        <item itemvalue="JUnit.SpringBoot02ConfigApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ce692f94-6e23-471a-adc1-251c484d2218" name="Default Changelist" comment="" />
+      <created>1584182857370</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584182857370</updated>
+      <workItem from="1584182860611" duration="603000" />
+      <workItem from="1584183490944" duration="1248000" />
+      <workItem from="1584186159588" duration="4292000" />
+      <workItem from="1584198059243" duration="5000" />
+      <workItem from="1584234438314" duration="8729000" />
+      <workItem from="1584929285469" duration="1325000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="233" y="59" key="#Notifications" timestamp="1584182881211">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="233" y="59" key="#Notifications/0.0.1280.800@0.0.1280.800" timestamp="1584182881211" />
+    <state x="34" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584238713735">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="34" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1584238713735" />
+    <state x="766" y="87" key="#com.intellij.ide.util.MemberChooser" timestamp="1584184440646">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="766" y="87" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1584184440646" />
+    <state x="468" y="184" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584238091608">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="468" y="184" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.800@0.0.1280.800" timestamp="1584238091608" />
+    <state width="595" height="166" key="GridCell.Tab.0.bottom" timestamp="1584285148365">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="595" height="166" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1584285148365" />
+    <state width="595" height="166" key="GridCell.Tab.0.center" timestamp="1584285148365">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="595" height="166" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1584285148365" />
+    <state width="595" height="166" key="GridCell.Tab.0.left" timestamp="1584285148365">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="595" height="166" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1584285148365" />
+    <state width="595" height="166" key="GridCell.Tab.0.right" timestamp="1584285148365">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="595" height="166" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1584285148365" />
+    <state width="1238" height="390" key="GridCell.Tab.1.bottom" timestamp="1584285148349">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="390" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1584285148349" />
+    <state width="1238" height="390" key="GridCell.Tab.1.center" timestamp="1584285148349">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="390" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1584285148349" />
+    <state width="1238" height="390" key="GridCell.Tab.1.left" timestamp="1584285148349">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="390" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1584285148349" />
+    <state width="1238" height="390" key="GridCell.Tab.1.right" timestamp="1584285148349">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="390" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1584285148349" />
+    <state x="210" y="16" key="SettingsEditor" timestamp="1584188386274">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="210" y="16" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1584188386274" />
+    <state x="618" y="183" key="run.anything.popup" timestamp="1584240784527">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="618" y="183" key="run.anything.popup/0.0.1280.800@0.0.1280.800" timestamp="1584240784527" />
+    <state x="302" y="58" width="672" height="676" key="search.everywhere.popup" timestamp="1584929525778">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="302" y="58" width="672" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1584929525778" />
+  </component>
+</project>

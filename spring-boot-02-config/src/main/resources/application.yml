@@ -1,0 +1,45 @@
+#
+#person:
+##  lastName: 张三
+##  age: 24
+##  boss: true
+##  birth: 2000/1/1
+#  lastName: 张三_${random.value}
+#  age: ${random.int}
+#  boss: true
+#  birth: 2000/1/1
+#  maps:
+#    k1: v1
+#    k2: string
+#    dog:
+#      name: beibei
+#      age: 2
+#  lists:
+#    - lisi
+#    - zhangsan
+#  dog:
+#    name: 小贝${random.uuid}
+#    age: ${random.int(100)}
+#
+#server:
+#  port: 8080
+
+# 测试多文档块方式
+server:
+  port: 8084
+debug: true
+#spring:
+#  profiles:
+#    active: prod2
+#
+#---
+#server:
+#  port: 8085
+#spring:
+#  profiles: dev2
+#
+#---
+#server:
+#  port: 8086
+#spring:
+#  profiles: prod2

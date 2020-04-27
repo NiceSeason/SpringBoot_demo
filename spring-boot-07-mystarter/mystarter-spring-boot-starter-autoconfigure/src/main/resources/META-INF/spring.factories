@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+cn.edu.ustc.springboot.autoconfigure.config.HelloServiceAutoConfiguration

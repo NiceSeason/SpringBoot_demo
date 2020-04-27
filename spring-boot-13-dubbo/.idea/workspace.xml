@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="06d425e8-cff4-4789-83b4-29f12afc2c0d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Works\Softwares\Module\maven\maven_repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../Module/maven/apache-maven-3.5.2" />
+        <option name="userSettingsFile" value="D:\Works\Softwares\Module\maven\apache-maven-3.5.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectId" id="1afJUo60IDBMKfmJHh5UfXDpuH0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="cn.edu.ustc" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.edu.ustc.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ConsumerUserApplicationTests.contextLoads">
+    <configuration name="ConsumerUserApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="consumer-user" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.ustc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.edu.ustc" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.ustc.ConsumerUserApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsumerUserApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="consumer-user" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.edu.ustc.ConsumerUserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsumerUserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="consumer-user" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.edu.ustc.consumer.ConsumerUserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProviderTicketApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="provider-ticket" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.ustc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.edu.ustc.ProviderTicketApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProviderTicketApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="provider-ticket" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.edu.ustc.providerticket.ProviderTicketApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ConsumerUserApplicationTests.contextLoads" />
+        <item itemvalue="Spring Boot.ProviderTicketApplication (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06d425e8-cff4-4789-83b4-29f12afc2c0d" name="Default Changelist" comment="" />
+      <created>1587120732721</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587120732721</updated>
+      <workItem from="1587120734324" duration="1111000" />
+      <workItem from="1587121904455" duration="2694000" />
+      <workItem from="1587124631205" duration="4312000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="233" y="59" key="#Project_Structure" timestamp="1587120739305">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="233" y="59" key="#Project_Structure/0.0.1280.800@0.0.1280.800" timestamp="1587120739305" />
+    <state x="446" y="110" key="#com.intellij.ide.util.MemberChooser" timestamp="1587121552080">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="446" y="110" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1587121552080" />
+    <state x="157" y="316" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1587122747552">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="157" y="316" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.800@0.0.1280.800" timestamp="1587122747552" />
+    <state x="424" y="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1587122771156">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="424" y="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1280.800@0.0.1280.800" timestamp="1587122771156" />
+    <state width="1238" height="215" key="GridCell.Tab.0.bottom" timestamp="1587138699375">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="215" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1587138699375" />
+    <state width="1238" height="215" key="GridCell.Tab.0.center" timestamp="1587138699375">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="215" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1587138699375" />
+    <state width="1238" height="215" key="GridCell.Tab.0.left" timestamp="1587138699375">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="215" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1587138699375" />
+    <state width="1238" height="215" key="GridCell.Tab.0.right" timestamp="1587138699375">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="215" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1587138699375" />
+    <state width="1238" height="215" key="GridCell.Tab.1.bottom" timestamp="1587138699371">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="215" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1587138699371" />
+    <state width="1238" height="215" key="GridCell.Tab.1.center" timestamp="1587138699371">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="215" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1587138699371" />
+    <state width="1238" height="215" key="GridCell.Tab.1.left" timestamp="1587138699371">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="215" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1587138699371" />
+    <state width="1238" height="215" key="GridCell.Tab.1.right" timestamp="1587138699371">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="215" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1587138699371" />
+    <state x="6" y="10" key="new project wizard" timestamp="1587121102622">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="6" y="10" key="new project wizard/0.0.1280.800@0.0.1280.800" timestamp="1587121102622" />
+  </component>
+</project>

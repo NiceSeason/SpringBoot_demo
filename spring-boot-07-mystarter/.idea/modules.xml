@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mystarter-spring-boot-starter/mystarter-spring-boot-starter.iml" filepath="$PROJECT_DIR$/mystarter-spring-boot-starter/mystarter-spring-boot-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mystarter-spring-boot-starter-autoconfigure/mystarter-spring-boot-starter-autoconfigure.iml" filepath="$PROJECT_DIR$/mystarter-spring-boot-starter-autoconfigure/mystarter-spring-boot-starter-autoconfigure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-starter/test-starter.iml" filepath="$PROJECT_DIR$/test-starter/test-starter.iml" />
+    </modules>
+  </component>
+</project>

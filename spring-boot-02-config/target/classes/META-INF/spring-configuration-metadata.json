@@ -1,0 +1,47 @@
+{
+  "groups": [
+    {
+      "name": "person",
+      "type": "cn.ustc.edu.springboot02config.domain.Person",
+      "sourceType": "cn.ustc.edu.springboot02config.domain.Person"
+    }
+  ],
+  "properties": [
+    {
+      "name": "person.age",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.ustc.edu.springboot02config.domain.Person"
+    },
+    {
+      "name": "person.birth",
+      "type": "java.util.Date",
+      "sourceType": "cn.ustc.edu.springboot02config.domain.Person"
+    },
+    {
+      "name": "person.boss",
+      "type": "java.lang.Boolean",
+      "sourceType": "cn.ustc.edu.springboot02config.domain.Person"
+    },
+    {
+      "name": "person.dog",
+      "type": "cn.ustc.edu.springboot02config.domain.Dog",
+      "sourceType": "cn.ustc.edu.springboot02config.domain.Person"
+    },
+    {
+      "name": "person.last-name",
+      "type": "java.lang.String",
+      "sourceType": "cn.ustc.edu.springboot02config.domain.Person"
+    },
+    {
+      "name": "person.lists",
+      "type": "java.util.List<java.lang.Object>",
+      "sourceType": "cn.ustc.edu.springboot02config.domain.Person"
+    },
+    {
+      "name": "person.maps",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "sourceType": "cn.ustc.edu.springboot02config.domain.Person"
+    }
+  ],
+  "hints": []
+}

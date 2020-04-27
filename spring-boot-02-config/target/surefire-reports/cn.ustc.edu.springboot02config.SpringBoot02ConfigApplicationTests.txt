@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: cn.ustc.edu.springboot02config.SpringBoot02ConfigApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.898 s - in cn.ustc.edu.springboot02config.SpringBoot02ConfigApplicationTests
