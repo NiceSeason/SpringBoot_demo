@@ -13,9 +13,15 @@ public class MyCacheConfig {
     @Bean("myKeyGenerator")
     public KeyGenerator myKeyGenerator() {
         return new KeyGenerator(){
+            /**
+             * @param target 添加注解方法所在类的对象
+             * @param method 添加注解的方法
+             * @param params 添加注解方法的参数
+             * @return
+             */
             @Override
             public Object generate(Object target, Method method, Object... params) {
-                return method.getName()+"["+ Arrays.asList(params).toString()+target+"]";
+                return method.getName()+"["+ Arrays.asList(params).toString()+"----"+target+"]";
             }
         };
     }

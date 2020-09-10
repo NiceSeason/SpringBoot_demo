@@ -269,9 +269,15 @@ public class MyCacheConfig {
     @Bean("myKeyGenerator")
     public KeyGenerator myKeyGenerator() {
         return new KeyGenerator(){
+           /**
+             * @param target 添加注解方法所在类的对象
+             * @param method 添加注解的方法
+             * @param params 添加注解方法的参数
+             * @return
+             */
             @Override
             public Object generate(Object target, Method method, Object... params) {
-                return method.getName()+"["+ Arrays.asList(params).toString()+target+"]";
+                return method.getName()+"["+ Arrays.asList(params).toString()+"----"+target+"]";
             }
         };
     }
@@ -619,27 +625,33 @@ v:
 \xAC\xED\x00\x05sr\x00$cn.edu.ustc.springboot.bean.Employeeuqf\x03p\x9A\xCF\xE0\x02\x00\x05L\x00\x03dIdt\x00\x13Ljava/lang/Integer;L\x00\x05emailt\x00\x12Ljava/lang/String;L\x00\x06genderq\x00~\x00\x01L\x00\x02idq\x00~\x00\x01L\x00\x08lastNameq\x00~\x00\x02xpsr\x00\x11java.lang.Integer\x12\xE2\xA0\xA4\xF7\x81\x878\x02\x00\x01I\x00\x05valuexr\x00\x10java.lang.Number\x86\xAC\x95\x1D\x0B\x94\xE0\x8B\x02\x00\x00xp\x00\x00\x00\x03t\x00\x07cch@aaasq\x00~\x00\x04\x00\x00\x00\x01q\x00~\x00\x08t\x00\x03cch
 ```
 
-要想让对象以**json形式**存储在redis中，需要自定义RedisCacheManager，使用GenericJackson2JsonRedisSerializer类对value进行序列化
+要想让对象以**json形式**存储在redis中，需要自定义RedisCacheConfiguration，使用GenericJackson2JsonRedisSerializer类对value进行序列化，并且如果要使配置文件中的配置生效，还要在RedisCacheConfiguration设置各项参数
 
 ```java
 @Configuration
 public class MyRedisConfig {
-    @Bean
-    RedisCacheManager cacheManager(RedisConnectionFactory factory){
-        //创建默认RedisCacheWriter
-        RedisCacheWriter cacheWriter = RedisCacheWriter.nonLockingRedisCacheWriter(factory);
-        
-        //创建默认RedisCacheConfiguration并使用GenericJackson2JsonRedisSerializer构造的		SerializationPair对value进行转换
-        //创建GenericJackson2JsonRedisSerializer的json序列化器
-        GenericJackson2JsonRedisSerializer jsonRedisSerializer = new GenericJackson2JsonRedisSerializer();
-        //使用json序列化器构造出对转换Object类型的SerializationPair序列化对
-        RedisSerializationContext.SerializationPair<Object> serializationPair = RedisSerializationContext.SerializationPair.fromSerializer(jsonRedisSerializer);
-        //将可以把Object转换为json的SerializationPair传入RedisCacheConfiguration
-        //使得RedisCacheConfiguration在转换value时使用定制序列化器
-        RedisCacheConfiguration cacheConfiguration=RedisCacheConfiguration.defaultCacheConfig().serializeValuesWith(serializationPair);
-        
-        RedisCacheManager cacheManager = new RedisCacheManager(cacheWriter,cacheConfiguration);
-        return cacheManager;
+   @Bean
+    public org.springframework.data.redis.cache.RedisCacheConfiguration redisCacheConfiguration(CacheProperties cacheProperties) {
+        CacheProperties.Redis redisProperties = cacheProperties.getRedis();
+        org.springframework.data.redis.cache.RedisCacheConfiguration config = org.springframework.data.redis.cache.RedisCacheConfiguration
+                .defaultCacheConfig();
+        //设置json为序列化器
+        config = config.serializeValuesWith(
+                RedisSerializationContext.SerializationPair.fromSerializer(new GenericJackson2JsonRedisSerializer()));
+        //设置配置文件中的各项参数
+        if (redisProperties.getTimeToLive() != null) {
+            config = config.entryTtl(redisProperties.getTimeToLive());
+        }
+        if (redisProperties.getKeyPrefix() != null) {
+            config = config.prefixKeysWith(redisProperties.getKeyPrefix());
+        }
+        if (!redisProperties.isCacheNullValues()) {
+            config = config.disableCachingNullValues();
+        }
+        if (!redisProperties.isUseKeyPrefix()) {
+            config = config.disableKeyPrefix();
+        }
+        return config;
     }
 }
 ```
@@ -701,7 +713,7 @@ class RedisCacheConfiguration {
 			CacheProperties cacheProperties,
 			ObjectProvider<org.springframework.data.redis.cache.RedisCacheConfiguration> redisCacheConfiguration,
 			ClassLoader classLoader) {
-        //determineConfiguration()调用了createConfiguration()
+        //如果容器中存在RedisCacheConfiguration就直接返回，否则调用RedisCacheConfiguration()创建
 		return redisCacheConfiguration.getIfAvailable(() -> createConfiguration(cacheProperties, classLoader));
 	}
 
@@ -864,7 +876,7 @@ public class RedisCache extends AbstractValueAdaptingCache {
     }
 ```
 
-分析到这也就不难理解，要使用json保存序列化数据时，需要自定义RedisCacheManager，在RedisCacheConfiguration中定义序列化转化规则，并向RedisCacheManager传入我们自己定制的RedisCacheConfiguration了，我定制的序列化规则会跟随RedisCacheConfiguration一直传递到RedisCache，并在序列化时发挥作用。
+分析到这也就不难理解，要使用json保存序列化数据时，需要自定义RedisCacheConfiguration，在RedisCacheConfiguration中定义序列化转化规则，并向RedisCacheManager传入我们自己定制的RedisCacheConfiguration了，我定制的序列化规则会跟随RedisCacheConfiguration一直传递到RedisCache，并在序列化时发挥作用。
 
 
 

@@ -14,9 +14,9 @@ public class EmployeeService {
     private EmployeeMapper employeeMapper;
 
     @Cacheable(value={"emp"}
-//            key = "#id+#root.methodName+#root.caches[0].name",
-//            keyGenerator = "myKeyGenerator",
-//            condition = "#a0>1",
+            ,key = "#id+#root.methodName+#root.caches[0].name"
+//            ,keyGenerator = "myKeyGenerator"
+//            ,condition = "#a0>1"
 //            unless = "#p0==2"
     )
     public Employee getEmpById(Integer id) {
