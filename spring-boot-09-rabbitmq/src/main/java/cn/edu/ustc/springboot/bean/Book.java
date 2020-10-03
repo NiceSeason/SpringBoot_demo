@@ -2,7 +2,6 @@ package cn.edu.ustc.springboot.bean;
 
 
 
-import java.io.Serializable;
 
 
 public class Book {

@@ -908,7 +908,7 @@ public class RedisCache extends AbstractValueAdaptingCache {
 
 ​	用户注册操作和消息处理并行，提高响应速度
 
-<img src="/images/图片3.png" style="zoom:50%;" />
+<img src="images/图片3.png" style="zoom:50%;" />
 
 2. 应用解耦
 
@@ -1056,7 +1056,7 @@ spring.rabbitmq.host=192.168.31.162
 #spring.rabbitmq.password=guest	 默认值为guest
 ```
 
-### 2. RabbitMQ的使用
+### 2. RabbitMQ客户端API
 
 RabbitAutoConfiguration中有内部类RabbitTemplateConfiguration,在该类中向容器中分别导入了**RabbitTemplate**和**AmqpAdmin**
 
@@ -1117,9 +1117,11 @@ amqpAdmin.declareBinding(new Binding("admin.test", Binding.DestinationType.QUEUE
 
 **消息的监听**
 
-在回调方法上标注@RabbitListener注解，并设置其属性queues，注册监听队列，当该队列收到消息时，标注方法遍会调用
+* 在回调方法上标注@RabbitListener注解，并设置其属性queues，注册监听队列，当该队列收到消息时，标注方法遍会调用
 
-可分别使用Message和保存消息所属对象进行消息接收，若使用Object对象进行消息接收，实际上接收到的也是Message
+* 可分别使用Message和保存消息所属对象进行消息接收，若使用Object对象进行消息接收，实际上接收到的也是Message
+
+* 如果知道接收的消息是何种类型的对象，可在方法参数中直接加上该类型参数，也可接收到
 
 ```java
 @Service
@@ -1139,10 +1141,139 @@ public class BookService {
     public void receive2(Message message){
         System.out.println("收到消息"+message.getHeaders()+"---"+message.getPayload());
     }
+    
+    @RabbitListener(queues = {"admin.test"})
+    public void receive3(Message message,Book book){
+        System.out.println("3收到消息：book:"+book.getClass()+"\n" +
+                "message:"+message.getClass());
+        //3收到消息：book:class cn.edu.ustc.springboot.bean.Book
+		//message: class org.springframework.amqp.core.Message
+    }
 }
 ```
 
+* 若消息中含有不同的对象，可以使用`@RabbitHandler`进行分别接收
 
+```java
+@RabbitListener(queues = {"admin.test"})
+@Service
+public class BookService {
+
+    @RabbitHandler
+    public void receive4(Book book){
+        System.out.println("4收到消息：book:" + book);
+    }
+
+    @RabbitHandler
+    public void receive5(Student student){
+        System.out.println("5收到消息：student:" + student);
+    }
+```
+
+### 3.  消息的可靠投递
+
+为保证消息不丢失，可靠抵达，可以使用事务消息，但性能下降250倍，为此引入确认机制
+
+* **publisher** confirmCallback 确认模式
+* **publisher** returnCallback 未投递到queue 退回模式(失败时触发回调)
+* **consumer** ack(Acknowledgement)机制
+
+<img src="images/Snipaste_2020-10-03_10-15-35.png" style="zoom:38%;" />
+
+#### (1) confirmCallback
+
+<img src="images/Snipaste_2020-10-03_10-36-24.png" style="zoom: 50%;" />
+
+` CorrelationData`为消息的唯一标识，在发送消息时进行构建
+
+```java
+@Configuration
+public class AmqpConfig {
+
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+
+    @Bean
+    public MessageConverter messageConverter() {
+        return new Jackson2JsonMessageConverter();
+    }
+
+    @PostConstruct  //此类创建完成后调用此方法
+    public void initRabbitTemplate() {
+        rabbitTemplate.setConfirmCallback(new RabbitTemplate.ConfirmCallback() {
+            @Override
+            public void confirm(CorrelationData correlationData, boolean ack, String cause) {
+                System.out.println("confirm CorrelationData:"+correlationData+"===>ack:"+ack+"====>cause:"+cause);
+            }
+//confirm CorrelationData:CorrelationData [id=e3812ddd-f9c3-4f11-9510-d130a8d8f4d6]===>ack:true====>cause:null
+//confirm CorrelationData:CorrelationData [id=d9560acc-f745-4a62-87cf-b6420d58706d]===>ack:true====>cause:null
+//confirm CorrelationData:CorrelationData [id=4cf4a709-62ac-4966-afb9-90ec6c62a35b]===>ack:true====>cause:null
+
+        });
+    }
+}
+```
+
+#### (2) ReturnCallback
+
+<img src="images/Snipaste_2020-10-03_10-51-26.png" style="zoom: 50%;" />
+
+```properties
+# 开启发送端抵达队列的确认
+spring.rabbitmq.publisher-returns=true
+# 只要抵达队列，以异步发送优先回调
+spring.rabbitmq.template.mandatory=true
+```
+
+```java
+rabbitTemplate.setReturnCallback(new RabbitTemplate.ReturnCallback() {
+    @Override
+    public void returnedMessage(Message message, int replyCode, String replyText, String exchange, String routingKey) {
+        System.out.println("return callback...message:"+message+"===>replycode:"+replyCode+"===>replyText:"+replyText+"===>exchange:"+exchange+"===>routingKey:"+routingKey);
+    }
+});
+```
+
+```
+return callback...message:(Body:'{"name":"水浒传","price":0.0}' MessageProperties [headers={spring_returned_message_correlation=8f5d080c-35c8-42db-ac3d-0bf7509906aa, __TypeId__=cn.edu.ustc.springboot.bean.Book}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, deliveryTag=0])===>replycode:312===>replyText:NO_ROUTE===>exchange:admin.direct===>routingKey:admin.test0
+
+confirm CorrelationData:CorrelationData [id=8f5d080c-35c8-42db-ac3d-0bf7509906aa]===>ack:true====>causenull
+
+return callback...message:(Body:'{"name":"mhs","age":1}' MessageProperties [headers={spring_returned_message_correlation=2961a45c-19ee-4b94-8281-03e00fbdceea, __TypeId__=cn.edu.ustc.springboot.bean.Student}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, deliveryTag=0])===>replycode:312===>replyText:NO_ROUTE===>exchange:admin.direct===>routingKey:admin.test11
+
+```
+
+#### (3) ack
+
+<img src="images/Snipaste_2020-10-03_11-03-32.png" style="zoom:38%;" />
+
+在默认情况下，消息如果消费到一半，服务器宕机，剩下的消息就会默认全部确认，会造成消息丢失，因此需要引入手动确认模式
+
+```properties
+# 消费端手动ack消息
+spring.rabbitmq.listener.simple.acknowledge-mode=manual
+```
+
+只要没有明确通知服务器ack，消息就不会确认收货，可以通过`basicAck()`进行确认收货
+
+```java
+@RabbitHandler
+public void receive4(Book book, Message message,Channel channel) throws IOException {
+    try {
+        Thread.sleep(100);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+    System.out.println("4收到消息：book:" + book);
+    //deliveryTag在通道内按顺序自增
+    long deliveryTag = message.getMessageProperties().getDeliveryTag();
+    System.out.println(deliveryTag);
+    //通过deliveryTag进行确认，false表示不批量确认
+    channel.basicAck(deliveryTag,false);
+}
+```
+
+此外还可以使用`basicNack()`和`basicReject()`进行拒绝收货
 
 # (三) Spring boot与检索
 
