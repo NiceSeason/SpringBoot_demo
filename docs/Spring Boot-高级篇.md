@@ -27,7 +27,7 @@ Java Caching定义了5个核心接口
 
   每一个存储在Cache中的条目有一个定义的有效期。一旦超过这个时间，条目为过期的状态。一旦过期，条目将不可访问、更新和删除。缓存有效期可以通过ExpiryPolicy设置。
 
-  ![jsr107示意图](images/图片1.png)
+  ![jsr107示意图](https://i.loli.net/2020/10/03/9dV8CXpjDPAYL74.png)
 
   
 
@@ -43,7 +43,7 @@ Java Caching定义了5个核心接口
   * Spring提供了各种xxxCache的实现；如RedisCache，EhCacheCache ,
     ConcurrentMapCache等；
 
-  ![Spring缓存抽象](images/图片2.png)
+  ![Spring缓存抽象](https://i.loli.net/2020/10/03/yZPaFYGqrsUv8IE.png)
 
 ## 三、 重要缓存注解及概念
 
@@ -908,13 +908,13 @@ public class RedisCache extends AbstractValueAdaptingCache {
 
 ​	用户注册操作和消息处理并行，提高响应速度
 
-<img src="images/图片3.png" style="zoom:50%;" />
+<img src="https://i.loli.net/2020/10/03/nbJN45z6D3uEs97.png" style="zoom:50%;" />
 
 2. 应用解耦
 
    在下单时库存系统不能正常使用。也不影响正常下单，因为下单后，订单系统写入消息队列就不再关心其他的后续操作了。实现订单系统与库存系统的应用解耦
 
-   <img src="images/图片4.png" style="zoom:60%;" />
+   <img src="https://i.loli.net/2020/10/03/HMk4oKfBCsjm2cY.png" style="zoom:60%;" />
 
 3. 流量削峰
 
@@ -922,7 +922,7 @@ public class RedisCache extends AbstractValueAdaptingCache {
 
    秒杀业务根据消息队列中的请求信息，再做后续处理
 
-   ![](images/图片5.png)
+   ![](https://i.loli.net/2020/10/03/qWTQo5azcxihAVU.png)
 
 
 
@@ -998,7 +998,7 @@ AMQP 中增加了Exchange 和 Binding 的角色， Binding 决定交换器的消
    将路由键和某个模式进行匹配，此时队列需要绑定到一个模式上。它将路由键和绑定键的字符串切分成单词，这些单词之间用点隔开。
    识别通配符： # 匹配 0 个或多个单词， *匹配一个单词
 
-   ![](images/Snipaste_2020-04-09_14-11-13.png)
+   ![](https://i.loli.net/2020/10/03/xvz4jRmI1hc2QGw.png)
 
 ## 三、 Springboot中的RabbitMQ
 
@@ -1178,11 +1178,11 @@ public class BookService {
 * **publisher** returnCallback 未投递到queue 退回模式(失败时触发回调)
 * **consumer** ack(Acknowledgement)机制
 
-<img src="images/Snipaste_2020-10-03_10-15-35.png" style="zoom:38%;" />
+<img src="https://i.loli.net/2020/10/03/VIEF9woJaGchQpW.png" style="zoom:38%;" />
 
 #### (1) confirmCallback
 
-<img src="images/Snipaste_2020-10-03_10-36-24.png" style="zoom: 50%;" />
+<img src="https://i.loli.net/2020/10/03/mkn8LVQUiTxphsq.png" style="zoom: 50%;" />
 
 ` CorrelationData`为消息的唯一标识，在发送消息时进行构建
 
@@ -1216,7 +1216,7 @@ public class AmqpConfig {
 
 #### (2) ReturnCallback
 
-<img src="images/Snipaste_2020-10-03_10-51-26.png" style="zoom: 50%;" />
+<img src="https://i.loli.net/2020/10/03/w7ktlPEOAZeUMdQ.png" style="zoom: 50%;" />
 
 ```properties
 # 开启发送端抵达队列的确认
@@ -1245,7 +1245,7 @@ return callback...message:(Body:'{"name":"mhs","age":1}' MessageProperties [head
 
 #### (3) ack
 
-<img src="images/Snipaste_2020-10-03_11-03-32.png" style="zoom:38%;" />
+<img src="https://i.loli.net/2020/10/03/zcLPnRNXvq2uHoE.png" style="zoom:38%;" />
 
 在默认情况下，消息如果消费到一半，服务器宕机，剩下的消息就会默认全部确认，会造成消息丢失，因此需要引入手动确认模式
 
@@ -1311,7 +1311,7 @@ Elasticsearch是一个分布式搜索服务，提供Restful API，底层基于Lu
 -	属性---列
 ```
 
-<img src="images/Snipaste_2020-04-11_23-25-26.png" style="zoom:50%;" />
+<img src="https://i.loli.net/2020/10/03/kDuYetTVZ6arn2z.png" style="zoom:50%;" />
 
 
 

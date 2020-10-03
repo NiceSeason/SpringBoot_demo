@@ -59,11 +59,11 @@
 
 整合maven进来；
 
-![idea设置](images/搜狗截图20180129151045.png)
+![idea设置](https://i.loli.net/2020/10/03/tr4S5sJTbmHqRQD.png)
 
 
 
-![images/](images/搜狗截图20180129151112.png)
+![images/](https://i.loli.net/2020/10/03/podka1PwlyLhJS3.png)
 
 ## 4、Spring Boot HelloWorld
 
@@ -262,7 +262,7 @@ public @interface EnableAutoConfiguration {
 
 ​		将所有需要导入的组件以全类名的方式返回；这些组件就会被添加到容器中；
 
-​		会给容器中导入非常多的自动配置类（xxxAutoConfiguration）；就是给容器中导入这个场景需要的所有组件，并配置好这些组件；		![自动配置类](images/搜狗截图20180129224104.png)
+​		会给容器中导入非常多的自动配置类（xxxAutoConfiguration）；就是给容器中导入这个场景需要的所有组件，并配置好这些组件；		![自动配置类](https://i.loli.net/2020/10/03/46OnG1o3ZTaUMtY.png)
 
 有了自动配置类，免去了我们手动编写配置注入功能组件等的工作；
 
@@ -505,7 +505,7 @@ public class Person {
 
 调整
 
-![idea配置乱码](images/搜狗截图20180130161620.png)
+![idea配置乱码](https://i.loli.net/2020/10/03/G6SLfl8Vo2uChI9.png)
 
 #### 2、@Value获取值和@ConfigurationProperties获取值比较
 
@@ -1158,7 +1158,7 @@ public class HelloWorld {
 
 图示；
 
-![images/concrete-bindings.png](images/concrete-bindings.png)
+![images/concrete-bindings.png](https://i.loli.net/2020/10/03/2MD659QIamdZE1Y.png)
 
 每一个日志的实现框架都有自己的配置文件。使用slf4j以后，**配置文件还是做成日志实现框架自己本身的配置文件；**
 
@@ -1168,7 +1168,7 @@ a（slf4j+logback）: Spring（commons-logging）、Hibernate（jboss-logging）
 
 统一日志记录，即使是别的框架和我一起统一使用slf4j进行输出？
 
-![](images/legacy.png)
+![](https://i.loli.net/2020/10/03/LwzxCOydXKH2gTD.png)
 
 **如何让系统中所有的日志都统一到slf4j；**
 
@@ -1202,7 +1202,7 @@ SpringBoot使用它来做日志功能；
 
 底层依赖关系
 
-![](images/搜狗截图20180131220946.png)
+![](https://i.loli.net/2020/10/03/LfGzoSsx7kQYH3w.png)
 
 总结：
 
@@ -1221,7 +1221,7 @@ public abstract class LogFactory {
     static LogFactory logFactory = new SLF4JLogFactory();
 ```
 
-![](images/搜狗截图20180131221411.png)
+![](https://i.loli.net/2020/10/03/iYSDOUlvKeEq4H6.png)
 
 
 
@@ -1542,7 +1542,7 @@ public class ResourceProperties implements ResourceLoaderAware {
 
 http://www.webjars.org/
 
-![](images/搜狗截图20180203181751.png)
+![](https://i.loli.net/2020/10/03/brviwBCHOR9YLF8.png)
 
 localhost:8080/webjars/jquery/3.3.1/jquery.js
 
@@ -1583,7 +1583,7 @@ localhost:8080/abc：去静态资源文件夹里面找abc
 
 JSP、Velocity、Freemarker、Thymeleaf
 
-![](images/template-engine.png)
+![](https://i.loli.net/2020/10/03/7C1kxoqzv3lXSEh.png)
 
 
 
@@ -1661,7 +1661,7 @@ public class ThymeleafProperties {
 
 ​	th：任意html属性；来替换原生属性的值
 
-![](images/2018-02-04_123955.png)
+![](https://i.loli.net/2020/10/03/yiXCPfOdaq9GbkW.png)
 
 
 
@@ -2018,7 +2018,7 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
 
 1）、编写国际化配置文件，抽取页面需要显示的国际化消息
 
-![](images/搜狗截图20180211130721.png)
+![](https://i.loli.net/2020/10/03/2Tdm6tp9zxFUajn.png)
 
 
 
@@ -2063,7 +2063,7 @@ public class MessageSourceAutoConfiguration {
 
 3）、去页面获取国际化的值；
 
-![](images/搜狗截图20180211134506.png)
+![](https://i.loli.net/2020/10/03/Dzg3dvRpEw9JMfi.png)
 
 
 
@@ -2823,17 +2823,17 @@ public class InternalResourceView extends AbstractUrlBasedView {
 
 ​		1）、浏览器，返回一个默认的错误页面
 
-![](images/搜狗截图20180226173408.png)
+![](https://i.loli.net/2020/10/03/qQwm1nijs6I3VXF.png)
 
   浏览器发送请求的请求头：
 
-![](images/搜狗截图20180226180347.png)
+![](https://i.loli.net/2020/10/03/U7rdxZahys4Kekf.png)
 
 ​		2）、如果是其他客户端，默认响应一个json数据
 
-![](images/搜狗截图20180226173527.png)
+![](https://i.loli.net/2020/10/03/EiKMBokJYeXp1fy.png)
 
-​		![](images/搜狗截图20180226180504.png)
+​		![](https://i.loli.net/2020/10/03/gh4kyPLAGmWK8it.png)
 
 **原理：**
 
@@ -3113,7 +3113,7 @@ public class MyErrorAttributes extends DefaultErrorAttributes {
 
 最终的效果：响应是自适应的，可以通过定制ErrorAttributes改变需要返回的内容，
 
-![](images/搜狗截图20180228135513.png)
+![](https://i.loli.net/2020/10/03/zdjKEcD15BPgshH.png)
 
 
 
@@ -3121,7 +3121,7 @@ public class MyErrorAttributes extends DefaultErrorAttributes {
 
 SpringBoot默认使用Tomcat作为嵌入式的Servlet容器；
 
-![](images/搜狗截图20180301142915.png)
+![](https://i.loli.net/2020/10/03/1a8uqW7RPGJBwcA.png)
 
 
 
@@ -3276,7 +3276,7 @@ public ServletRegistrationBean dispatcherServletRegistration(
 
 ### 3）、替换为其他嵌入式Servlet容器
 
-![](images/搜狗截图20180302114401.png)
+![](https://i.loli.net/2020/10/03/rkF1NC8BlDLsOAE.png)
 
 默认支持：
 
@@ -3423,7 +3423,7 @@ class ServletWebServerFactoryConfiguration {
 
 ServletWebServerFactoryConfiguration会根据容器中@ConditionalOnClass判断使用哪个嵌入式容器，然后将其工厂容器化
 
-![继承关系](images/Snipaste_2020-03-28_00-41-49.png)
+![继承关系](https://i.loli.net/2020/10/03/LtcSxWsHi8aIBY9.png)
 
 **2. 嵌入式Tomcat的创建与启动**
 
@@ -3536,7 +3536,7 @@ public class TomcatWebServer implements WebServer {
 
 在TomcatWebServer类中启动嵌入式Tomcat，如果不能启动则抛出异常
 
-<img src="images/Snipaste_2020-03-28_11-21-42.png" style="zoom: 67%;" />
+<img src="https://i.loli.net/2020/10/03/2CZe7nPVurklyQF.png" style="zoom: 67%;" />
 
 
 
@@ -3878,7 +3878,7 @@ Spring的web模块里面有这个文件：**org.springframework.web.SpringServle
 
 4）、每一个WebApplicationInitializer都调用自己的onStartup；
 
-![](images/搜狗截图20180302221835.png)
+![](https://i.loli.net/2020/10/03/CaUkEgvDOARYJIz.png)
 
 5）、相当于我们的SpringBootServletInitializer的类会被创建对象，并执行onStartup方法
 
@@ -3979,11 +3979,11 @@ Docker支持将软件编译成一个镜像；然后在镜像中各种软件做�
 
 运行中的这个镜像称为容器，容器启动是非常快速的。
 
-![](images/搜狗截图20180303145450.png)
+![](https://i.loli.net/2020/10/03/wIgUSFPmB4RqDZp.png)
 
 
 
-![](images/搜狗截图20180303145531.png)
+![](https://i.loli.net/2020/10/03/gRU8uK4JqbzP23r.png)
 
 ## 2、核心概念
 
@@ -3997,7 +3997,7 @@ docker镜像(Images)：软件打包好的镜像；放在docker仓库中；
 
 docker容器(Container)：镜像启动后的实例称为一个容器；容器是独立运行的一个或一组应用
 
-![](images/搜狗截图20180303165113.png)
+![](https://i.loli.net/2020/10/03/FnriagPIcoLBeNX.png)
 
 使用Docker的步骤：
 
@@ -4517,7 +4517,7 @@ public class DruidConfig {
 		</dependency>
 ```
 
-![](images/搜狗截图20180305194443.png)
+![](https://i.loli.net/2020/10/03/3MmeWUOQgjqN6Dw.png)
 
 步骤：
 
@@ -4648,7 +4648,7 @@ http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
 
 ### 1）、SpringData简介
 
-![](images/搜狗截图20180306105412.png)
+![](https://i.loli.net/2020/10/03/uRmTvzDwSe8nUGl.png)
 
 ### 2）、整合SpringData JPA
 
@@ -4741,9 +4741,9 @@ public SpringApplication(ResourceLoader resourceLoader, Class<?>... primarySourc
 }
 ```
 
-![](images/搜狗截图20180306145727.png)
+![](https://i.loli.net/2020/10/03/r7XfKcJyes1jO8E.png)
 
-![](images/搜狗截图20180306145855.png)
+![](https://i.loli.net/2020/10/03/Mo3IWYlK5iZphbH.png)
 
 ## 2、运行run方法
 
